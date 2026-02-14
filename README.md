@@ -1,10 +1,9 @@
 # ⚡ Lightning Network Tipping Application
 
-A production-ready web application for instant Bitcoin Lightning Network tipping between users. Built for college blockchain projects and Summer of Bitcoin applications.
+A web application for instant Bitcoin Lightning Network tipping between users. Built for college blockchain projects and Summer of Bitcoin applications.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-black)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)](https://fastapi.tiangolo.com/)
-[![Lightning Network](https://img.shields.io/badge/Lightning-Network-yellow)](https://lightning.network/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 ## 🌟 Features
@@ -28,41 +27,7 @@ A production-ready web application for instant Bitcoin Lightning Network tipping
 - **💾 Database**: SQLAlchemy ORM with SQLite (easily upgradeable to PostgreSQL)
 - **📊 API Documentation**: Auto-generated Swagger/OpenAPI docs
 
-## 🏗️ Architecture
 
-```
-lightning-tipping-app/
-├── backend/                 # FastAPI backend
-│   ├── app.py              # Main application entry point
-│   ├── config.py           # Configuration and environment variables
-│   ├── database.py         # Database connection and session management
-│   ├── models.py           # SQLAlchemy models
-│   ├── schemas.py          # Pydantic schemas for validation
-│   ├── routes/             # API endpoints
-│   │   ├── auth.py         # Authentication routes
-│   │   ├── users.py        # User management routes
-│   │   ├── lightning.py    # Lightning Network operations
-│   │   └── transactions.py # Transaction/tipping routes
-│   └── services/           # Business logic layer
-│       ├── auth.py         # Authentication service
-│       ├── lnbits.py       # LNbits API integration
-│       └── utils.py        # Utility functions
-├── frontend/                # Next.js frontend
-│   ├── app/                # Next.js 14 app directory
-│   │   ├── dashboard/      # Dashboard page
-│   │   ├── login/          # Login page
-│   │   ├── register/       # Registration page
-│   │   ├── send/           # Send tip page
-│   │   ├── deposit/        # Deposit page
-│   │   ├── withdraw/       # Withdrawal page
-│   │   └── leaderboard/    # Leaderboard page
-│   ├── components/         # Reusable React components
-│   ├── lib/                # Utilities and API client
-│   └── styles/             # Global CSS and Tailwind config
-├── .env.example            # Environment variables template
-├── requirements.txt        # Python dependencies
-└── README.md              # This file
-```
 
 ## 🚀 Quick Start (Windows 11)
 
@@ -133,11 +98,6 @@ npm run dev
 
 Frontend will start on `http://localhost:3000`
 
-### 4. Access the Application
-
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Documentation: http://localhost:8000/api/docs
 
 ## 📖 Usage Guide
 
@@ -225,36 +185,6 @@ Full API documentation available at `/api/docs` when running the backend.
 - **CORS Configuration**: Restricted origins
 - **Environment Variables**: Sensitive data stored securely
 
-## 🚀 Deployment
-
-### Railway (Free Tier)
-1. Create account at https://railway.app
-2. Install Railway CLI
-3. Run:
-```powershell
-railway login
-railway init
-railway up
-```
-
-### Render (Free Tier)
-1. Create account at https://render.com
-2. Connect GitHub repository
-3. Create Web Service for backend
-4. Create Static Site for frontend
-5. Set environment variables
-
-### Environment Variables for Production
-```env
-DEBUG=False
-SECRET_KEY=your-production-secret-key
-DATABASE_URL=postgresql://user:pass@host:port/db
-LNBITS_URL=https://legend.lnbits.com
-LNBITS_ADMIN_KEY=your-admin-key
-LNBITS_INVOICE_KEY=your-invoice-key
-WEBHOOK_URL=https://yourdomain.com/api/webhooks/payment
-```
-
 ## 📊 Database Schema
 
 ### Users Table
@@ -297,83 +227,6 @@ WEBHOOK_URL=https://yourdomain.com/api/webhooks/payment
 - SQLite (development)
 - PostgreSQL (production-ready)
 
-## 🐛 Troubleshooting
-
-### Backend won't start
-- Check Python version: `python --version` (need 3.9+)
-- Activate virtual environment: `.\venv\Scripts\activate`
-- Install dependencies: `pip install -r requirements.txt`
-
-### Frontend won't start
-- Check Node version: `node --version` (need 18+)
-- Delete and reinstall: `rm -rf node_modules package-lock.json && npm install`
-
-### Database errors
-- Delete database: `rm backend/tipping_app.db`
-- Restart backend to recreate
-
-### LNbits API errors
-- Check API keys in `.env`
-- Verify keys at https://legend.lnbits.com
-
-### CORS errors
-- Update `ALLOWED_ORIGINS` in `backend/config.py`
-- Restart backend
-
-## 📈 Performance Optimizations
-
-- Database indexing on frequently queried fields
-- Connection pooling for database
-- Async operations for Lightning API calls
-- React memoization for expensive renders
-- Image optimization with Next.js
-- Code splitting and lazy loading
-
-## 🗺️ Roadmap
-
-- [ ] WebSocket for real-time balance updates
-- [ ] Redis caching layer
-- [ ] Background job queue (Celery)
-- [ ] Email notifications
-- [ ] 2FA authentication
-- [ ] QR code scanner (camera integration)
-- [ ] Multi-currency display
-- [ ] Transaction charts and analytics
-- [ ] Docker deployment
-- [ ] Unit and integration tests
-
 ## 📄 License
 
 MIT License - see LICENSE file for details
-
-## 👨‍💻 Author
-
-Built with ⚡ by [Your Name]
-
-For Summer of Bitcoin 2026 Application
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit changes: `git commit -m 'Add AmazingFeature'`
-4. Push to branch: `git push origin feature/AmazingFeature`
-5. Open pull request
-
-## 🙏 Acknowledgments
-
-- [LNbits](https://lnbits.com) - Lightning wallet infrastructure
-- [Lightning Network](https://lightning.network/) - Layer 2 payment protocol
-- [Summer of Bitcoin](https://www.summerofbitcoin.org/) - Inspiration and opportunity
-
-## 📞 Support
-
-- Create an issue on GitHub
-- Email: your.email@example.com
-- Twitter: @yourhandle
-
----
-
-**⚡ Powered by the Lightning Network - The Future of Payments**
