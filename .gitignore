@@ -74,3 +74,11 @@ htmlcov/
 *.bak
 *.tmp
 .cache/
+
+# Development notes and temp files
+*_FIXES.md
+*_PROGRESS.md
+*_ERRORS.md
+test_config.py
+test-types.ts
+tsconfig.tsbuildinfo
