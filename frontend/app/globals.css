@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 10, 20, 10;
+    --accent-green: 34, 197, 94;
+    --accent-green-light: 74, 222, 128;
+    --accent-green-dark: 21, 128, 61;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(135deg,
+            rgb(var(--background-start-rgb)) 0%,
+            rgb(var(--background-end-rgb)) 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--accent-green));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--accent-green-light));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .gradient-green {
+        background: linear-gradient(135deg, rgb(var(--accent-green)) 0%, rgb(var(--accent-green-dark)) 100%);
+    }
+
+    .border-green {
+        border-color: rgb(var(--accent-green));
+    }
+
+    .glow-green {
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+}
